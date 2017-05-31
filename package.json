@@ -9,7 +9,7 @@
     "debug": "2.2.0",
     "mongodb-uri": "^0.9.7",
     "msgpack-js": "0.3.0",
-    "mubsub": "^1.1.2",
+    "mubsub": "^1.4.0",
     "socket.io-adapter": "0.4.0",
     "uid2": "0.0.3"
   },
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/modit/socket.io-adapter-mongo.git"
+    "url": "https://github.com/lklepner/socket.io-adapter-mongo.git"
   },
   "contributors": [
     {
