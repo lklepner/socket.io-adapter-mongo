@@ -12,7 +12,7 @@ Update 5/31/2017 - Versions prior to 1.0 allowed an object to be passed which wa
 ```js
 var io = require('socket.io')(3000);
 var mongoAdapter = require('socket.io-adapter-mongo');
-io.adapter(mongoAdapter({ 'mongodb://localhost:27017' }));
+io.adapter(mongoAdapter( 'mongodb://localhost:27017' ));
 ```
 
 By running socket.io with the `socket.io-adapter-mongo` adapter you can run
