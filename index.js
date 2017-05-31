@@ -19,7 +19,7 @@ module.exports = adapter;
 /**
  * Returns a mongo Adapter class.
  *
- * @param {String} optional, mongo uri
+ * @param {String} mongo uri
  * @return {Mongo} adapter
  * @api public
  */
@@ -27,43 +27,12 @@ module.exports = adapter;
 function adapter(uri, opts) {
 	opts = opts || {};
 
-	// handle options only
-	if ('object' == typeof uri) {
-		opts = uri;
-		uri = null;
-	}
-
-	// handle uri string
-	if (uri) {
-
-		// ensure uri has mongodb scheme
-		if (uri.indexOf('mongodb://') !== 0) {
-			uri = 'mongodb://' + uri;
-		}
-
-		// Parse to uri into an object
-		var uriObj = mongodbUri.parse(uri);
-		if (uriObj.username && uriObj.password) {
-			opts.username = uriObj.username;
-			opts.password = uriObj.password;
-		}
-		opts.host = uriObj.hosts[0].host;
-		opts.port = uriObj.hosts[0].port;
-		opts.db = uriObj.database;
-	}
-
 	// opts
 	var socket = opts.socket;
-	var creds = (opts.username && opts.password) ? opts.username + ':' + opts.password + '@' : '';
-	var host = opts.host || '127.0.0.1';
-	var port = Number(opts.port || 27017);
-	var db = opts.db || 'mubsub';
-
 	var client = opts.client;
 	var key = opts.key || 'socket.io';
 
 	// init clients if needed
-	var uri = 'mongodb://' + creds + host + ':' + port + '/' + db
 	if (!client) client = socket ? mubsub(socket) : mubsub(uri, opts);
 
 	// this server's key
