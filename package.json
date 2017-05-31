@@ -1,6 +1,6 @@
 {
   "name": "socket.io-adapter-mongo",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "mocha"
@@ -44,6 +44,10 @@
     {
       "name": "Yaw Etse",
       "email": "yaw.etse@gmail.com"
+    },
+    {
+      "name": "Lou Klepner",
+      "email": "lklepner@gmail.com"
     }
   ]
 }
