@@ -1,6 +1,6 @@
 {
   "name": "socket.io-adapter-mongo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "scripts": {
     "test": "mocha"
@@ -10,7 +10,7 @@
     "mongodb-uri": "^0.9.7",
     "msgpack-js": "0.3.0",
     "mubsub": "^1.4.0",
-    "socket.io-adapter": "0.4.0",
+    "socket.io-adapter": "0.5.0",
     "uid2": "0.0.3"
   },
   "devDependencies": {
