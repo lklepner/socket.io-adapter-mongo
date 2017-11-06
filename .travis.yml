@@ -1,25 +1,20 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.11"
-  - "0.12"
   - "4"
   - "5"
   - "6"
   - "7"
+  - "8"
+  - "9"
   - "node"
   - "lts/*"
 
 matrix:
   fast_finish: true
-  allow_failures:
-    - node_js: "0.10"
-    - node_js: "0.11"
-    - node_js: "0.12"
 
 services:
   - mongodb
   
 before_script:
   - sleep 15
-  - mongo test --eval 'db.addUser("test", "test");'
+  - mongo test --eval 'db.createUser("test", "test");'
