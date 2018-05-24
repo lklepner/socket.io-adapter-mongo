@@ -14,7 +14,7 @@ matrix:
 
 services:
   - mongodb
-  
+
 before_script:
   - sleep 15
-  - mongo test --eval 'db.createUser("test", "test");'
+  - mongo mydb_test --eval 'db.createUser({user:"travis",pwd:"test",roles:["readWrite"]});'
