@@ -31,6 +31,7 @@ function adapter(uri, opts) {
 	var socket = opts.socket;
 	var client = opts.client;
 	var key = opts.key || 'socket.io';
+	delete opts.key; // prevent key from being passed to mongoDB (via mubsub) and generating a warning
 
 	// init clients if needed
 	if (!client) client = socket ? mubsub(socket) : mubsub(uri, opts);

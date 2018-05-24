@@ -6,6 +6,7 @@ node_js:
   - "7"
   - "8"
   - "9"
+  - "10"
   - "node"
   - "lts/*"
 
@@ -14,7 +15,7 @@ matrix:
 
 services:
   - mongodb
-  
+
 before_script:
   - sleep 15
-  - mongo test --eval 'db.createUser("test", "test");'
+  - mongo test --eval 'db.createUser({user:"test",pwd:"test",roles:["readWrite"]});'
