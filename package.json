@@ -6,7 +6,7 @@
     "test": "mocha"
   },
   "dependencies": {
-    "debug": "2.2.0",
+    "debug": "2.6.9",
     "mongodb-uri": "^0.9.7",
     "msgpack-js": "0.3.0",
     "mubsub": "^1.4.0",
