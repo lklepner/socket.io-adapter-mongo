@@ -3,11 +3,10 @@
  */
 
 var uid2 = require('uid2')
-		, mubsub = require('mubsub')
+		, mubsub = require('@nodebb/mubsub')
 		, msgpack = require('msgpack-js')
 		, Adapter = require('socket.io-adapter')
 		, debug = require('debug')('socket.io-mongo')
-		, mongodbUri = require('mongodb-uri');
 		;
 
 /**
