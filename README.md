@@ -40,7 +40,21 @@ The following options are allowed:
   be used instead of the mongo URI if specified.
 - `client`: optional, the mubsub client to publish events on
 
-If you decide to supply a client, make sure you use [mubsub](https://github.com/scttnlsn/mubsub) as a client or one with an equivalent API.
+If you decide to supply a client, make sure you use [mubsub](https://github.com/nodebb/mubsub) as a client or one with an equivalent API.
+
+## Running tests
+
+Stat mongo, thenopen the `test` db
+
+    mongo> use test
+
+And create a new user
+
+    mongo> db.createUser({ user: "test", password: "test", roles: [ "readWrite" ] })
+
+Then run the tests
+
+    npm test
 
 ## License
 

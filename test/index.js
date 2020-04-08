@@ -2,7 +2,7 @@ var http = require('http').Server;
 var io = require('socket.io');
 var ioc = require('socket.io-client');
 var expect = require('expect.js');
-var mubsub = require('mubsub')
+var mubsub = require('@nodebb/mubsub')
 var adapter = require('../');
 
 describe('socket.io-mongo', function(){
